@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>gatitos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">gatitos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor = "let g of gatitos">
+      {{g.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

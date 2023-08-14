@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'gatitos',
+    loadChildren: () => import('./gatitos/gatitos.module').then( m => m.GatitosPageModule)
+  },
 ];
 
 @NgModule({

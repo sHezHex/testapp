@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public homeData = [
+    {
+      title:'TestApp Header'
+    }
+  ]
+
   constructor() {}
 
 }
