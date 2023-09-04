@@ -4,18 +4,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">gatitos</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<ion-content class="ion-padding">
 
-<ion-content>
+  <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
+    <ion-fab-button color="danger" (click)="addNewGatito();">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <ion-list>
-    <ion-item *ngFor = "let g of gatitos">
-      {{g.name}}
+    <ion-item *ngFor = "let g of gatitos" [routerLink] = "['/gatitos',g.id]">
+      <ion-avatar>
+        <ion-img [src] = "g.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{g.name}}
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
+
+
+
+

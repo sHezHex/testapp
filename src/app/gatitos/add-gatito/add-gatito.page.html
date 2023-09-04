@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add-gatito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input placeholder="Write a Title" type="text" #title></ion-input>
+          <ion-input placeholder="image URL" type="text" #imageURL></ion-input>
+          <ion-button color="primary" (click) = "saveNewGatito(title,imageURL);">
+            Save
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+

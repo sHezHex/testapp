@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: GatitosPage
+  },
+  {
+    path: 'add-gatito',
+    loadChildren: () => import('./add-gatito/add-gatito.module').then( m => m.AddGatitoPageModule)
   }
 ];
 

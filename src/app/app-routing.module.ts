@@ -8,13 +8,30 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'gatitos',
     pathMatch: 'full'
   },
   {
     path: 'gatitos',
-    loadChildren: () => import('./gatitos/gatitos.module').then( m => m.GatitosPageModule)
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./gatitos/gatitos.module').then( m => m.GatitosPageModule)
+      },
+      {
+        path: 'new-gatito',
+        loadChildren: () => import('./gatitos/add-gatito/add-gatito.module').then(m => m.AddGatitoPageModule)
+      },
+      {
+        path: ':gatitosId',
+        loadChildren: () => import('./gatitos/gatitos-detail/gatitos-detail.module').then(m => m.GatitosDetailPageModule)
+      }
+    ]
   },
+  {
+    path: 'new-gatito',
+    loadChildren: () => import('./gatitos/add-gatito/add-gatito.module').then(m => m.AddGatitoPageModule)
+  }
 ];
 
 @NgModule({
