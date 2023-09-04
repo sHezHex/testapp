@@ -32,5 +32,4 @@ export class GatitosPage implements OnInit {
     this.router.navigate(['/new-gatito']);
   }
 
-
 }

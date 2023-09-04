@@ -15,5 +15,8 @@ export class AddGatitoPage implements OnInit {
 
   saveNewGatito (title:any, imageURL:any){
     console.log(title.value)
+    //de aqui seguir el tutorial q esta en docs
+    //crear un servicio que tenga un fx llamada addGatito(title,imageURL);
+    //llamar desde aca la funcion
   }
 }
